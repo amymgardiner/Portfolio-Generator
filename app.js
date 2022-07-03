@@ -11,7 +11,7 @@ const promptUser = () => {
         if (nameInput) {
           return true;
         } else {
-          console.log('Please enter your name.')
+          console.log('Please enter your name.');
           return false;
         }
       }
@@ -24,15 +24,28 @@ const promptUser = () => {
         if (githubInput) {
           return true;
         } else {
-          console.log('Please enter your GitHub username.')
+          console.log('Please enter your GitHub username.');
           return false;
         }
       }
     },
     {
+      type: 'confirm',
+      name: 'confirmAbout',
+      message: 'Would you like to enter some information about yourself for an "About" section?',
+      default: true
+    },
+    {
       type: 'input',
       name: 'about',
-      message: 'Provide some information about yourself:'
+      message: 'Provide some information about yourself:',
+      when: ({confirmAbout}) => {
+        if (confirmAbout) {
+          return true;
+        } else {
+          return false;
+        }
+      }
     }
   ]);
 };
@@ -57,7 +70,7 @@ const promptProject = portfolioData => {
         if (projectNameInput) {
           return true;
         } else {
-          console.log("Please enter your project's name.")
+          console.log("Please enter your project's name.");
           return false;
         }
       }
@@ -70,7 +83,7 @@ const promptProject = portfolioData => {
         if (descriptionInput) {
           return true;
         } else {
-          console.log("Please enter your project's description.")
+          console.log("Please enter your project's description.");
           return false;
         }
       }
@@ -89,7 +102,7 @@ const promptProject = portfolioData => {
         if (linkInput) {
           return true;
         } else {
-          console.log("Please enter your project's GitHub link.")
+          console.log("Please enter your project's GitHub link.");
           return false;
         }
       }
