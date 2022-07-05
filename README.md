@@ -1,8 +1,8 @@
-## Node.js Portfolio Generator
+# Node.js Portfolio Generator
 
 For Module 9 of my coding bootcamp class, I built a program that creates an HTML portfolio page. In this module we learned about Node.js and used it to build a tool that uses the command line to capture and place user input in a JavaScript function that provides the finished HTML page as output.
 
-# How to use this program
+## How to use this program
 
 Because this is a Node.js application that runs from a machine and not a browser, I can't deploy this to GitHub pages. Instead, the user will need to clone it to their own local machine and run it from there, by entering node app into their command line and answers the prompted questions.
 
@@ -10,7 +10,7 @@ The final HTML and CSS pages will be created in the dist folder from the root di
 
 Currently, in the dist folder of this program is a generated portfolio with a linked stylesheet that the user can see as an example of a finished product this program can create.
 
-# How the program works
+## How the program works
 
 The program starts by asking the user for their information with Inquirer prompts; this returns all of the data as an object in a Promise.
 
