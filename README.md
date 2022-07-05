@@ -8,6 +8,8 @@ Because this is a Node.js application that runs from a machine and not a browser
 
 The final HTML and CSS pages will be created in the dist folder from the root directory.
 
+Currently, in the dist folder of this program is a generated portfolio with a linked stylesheet that the user can see as an example of a finished product this program can create.
+
 # How the program works
 
 The program starts by asking the user for their information with Inquirer prompts; this returns all of the data as an object in a Promise.
@@ -21,3 +23,7 @@ The program then passes pageHTML into the newly created writeFile() function, wh
 Upon a successful file creation, it takes the writeFileResponse object provided by the writeFile() function's resolve() execution to log it, and then it returns copyFile().
 
 The Promise returned by copyFile() then lets the user know if the CSS file was copied correctly, and if so, they're all done!
+
+## Example of a generated portfolio from running this program
+
+![](./utils/127.0.0.1_5500_dist_index.html.png)
